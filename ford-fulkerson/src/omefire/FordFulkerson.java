@@ -55,6 +55,8 @@ public class FordFulkerson {
             while(currentNode != -1){ // what if path contains only one node ? source = sink ? or if path empty ?
                 residualGraph.getVertices()[currentNode][nextNodeToCurrent] = residualGraph.getVertices()[currentNode][nextNodeToCurrent] - minResidualFlow;
                 residualGraph.getVertices()[nextNodeToCurrent][currentNode] = residualGraph.getVertices()[currentNode][nextNodeToCurrent] + minResidualFlow;
+                nextNodeToCurrent = currentNode;
+                currentNode = parent[currentNode];
             }
 
             flow += minResidualFlow;
@@ -78,6 +80,7 @@ public class FordFulkerson {
         Queue<Integer> queue = new LinkedBlockingQueue<>();
         queue.add(source);
         visited[source] = true;
+        parent[source] = -1;
 
         while(!queue.isEmpty()) {
             int u = queue.remove();
@@ -85,13 +88,17 @@ public class FordFulkerson {
             // get all neighbors of u
             for(int v = 0; v < graph.getVertices().length; v++){
                 if( !visited[v] && graph.getVertices()[u][v] > 0 ){
-                    visited[u] = true;
                     queue.add(v);
                     parent[v] = u;
+                    if(v == sink){
+                        return true;
+                    }
                 }
             }
+
+            visited[u] = true;
         }
 
-        return visited[sink] == true;
+        return false;
     }
 }
