@@ -27,7 +27,7 @@ var AreTreesEqual = function areTreesEqual(firstTree, secondTree) {
     //   ... and right subtrees also have to be equal
     return (firstTree.Root === secondTree.Root)
         && (AreTreesEqual(firstTree.Left, secondTree.Left))
-        && (AreTreesEqual(firstTree.Left, secondTree.Left));
+        && (AreTreesEqual(firstTree.Right, secondTree.Right));
 };
 
 // Test cases
