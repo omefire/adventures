@@ -1,0 +1,29 @@
+
+
+* Wake up							       :Home:
+
+** TODO Brush teeth
+
+** DONE Take a shower
+
+** DONE Get ready
+
+* Eat [100%]							       :Home:
+  - [X] Eggs
+  - [X] Onions
+  - [X] pancakes
+
+* Go to Work							       :Work:
+* Lunch
+
+** TODO call friends
+
+** TODO find a place to eat
+
+
+* Work more
+
+* Go Home
+  DEADLINE: <2015-12-22 Tue>
+
+** TODO get into car
