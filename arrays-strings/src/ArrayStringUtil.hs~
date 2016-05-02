@@ -1,0 +1,13 @@
+module ArrayStringUtil (
+  isUnique,
+  checkPermutation
+) where
+
+
+isUnique :: String -> Bool
+isUnique s = True
+
+
+checkPermutation :: String -> String -> Bool
+checkPermutation s1 s2 = True
+
