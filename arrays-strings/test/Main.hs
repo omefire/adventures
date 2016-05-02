@@ -16,7 +16,10 @@ main = defaultMainWithOpts [
 
 testStringHasNoUniqueCharacters = testCase "testStringHasNoUniqueCharacters" $ do
   assertEqual "isUnique should return FALSE if string has duplicate characters" False (isUnique "Bakwerii")
+  assertEqual "isUnique should return FALSE if string has duplicate characters" False (isUnique "iBakweri")
+  assertEqual "isUnique should return FALSE if string has duplicate characters" False (isUnique "Bakwerik")
 
 testStringHasUniqueCharacters = testCase "testStringHasUniqueCharacters" $ do
   assertEqual "isUnique should return TRUE if string has unique characters" True (isUnique "Yaounde")
+  assertEqual "isUnique should return TRUE if string has unique characters" True (isUnique "Foumban")
   
