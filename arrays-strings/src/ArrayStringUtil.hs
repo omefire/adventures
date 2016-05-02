@@ -19,6 +19,7 @@ isUnique :: String -> Bool
 isUnique [] = True
 isUnique str = isUniqHelper str (Map.fromList [])
                  where isUniqHelper :: String -> Map.Map Char Int -> Bool
+                       isUniqHelper [] _ = True
                        isUniqHelper (first_char:remaining_chars) map =
                          case Map.lookup first_char map of
                            Just _ -> False
