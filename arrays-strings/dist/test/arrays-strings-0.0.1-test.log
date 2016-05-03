@@ -1,0 +1,12 @@
+Test suite test: RUNNING...
+testStringHasNoUniqueCharacters: [OK]
+testStringHasUniqueCharacters: [Failed]
+ERROR: src/ArrayStringUtil.hs:(22,24)-(26,65): Non-exhaustive patterns in function isUniqHelper
+
+
+         Test Cases  Total      
+ Passed  1           1          
+ Failed  1           1          
+ Total   2           2          
+Test suite test: FAIL
+Test suite logged to: dist/test/arrays-strings-0.0.1-test.log
