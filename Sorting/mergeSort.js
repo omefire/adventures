@@ -57,7 +57,7 @@ function mergeSort(array) {
 }
 
 var arrayToSort = [10, 2, 8, -100];//[4, 2, 10, 90, -1];
-var sortedArray = mergeSort(arrayToSort, 0, arrayToSort.length - 1);
+var sortedArray = mergeSort(arrayToSort);
 
 for(let i = 0; i < sortedArray; i++) {
     console.log(sortedArray[i]);
