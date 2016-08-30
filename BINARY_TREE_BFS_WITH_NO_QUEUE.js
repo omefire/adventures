@@ -1,5 +1,8 @@
 
-// ToDO: Cleanup + Edge cases
+// ToDO: 
+//   - Cleanup 
+//   - Edge cases
+//   - Better comments + documentation
 function Node(value, leftChild, rightChild) {
     this.value = value;
     this.leftChild = leftChild;
