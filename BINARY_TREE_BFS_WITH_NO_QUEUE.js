@@ -1,4 +1,5 @@
 
+// ToDO: Cleanup + Edge cases
 function Node(value, leftChild, rightChild) {
     this.value = value;
     this.leftChild = leftChild;
