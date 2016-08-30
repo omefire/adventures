@@ -41,14 +41,6 @@ function getNodeAt(rootNode, level, index) {
 
     function generateLeftRightCombinations(n) {
 
-        /*if(n === 0) {
-            return str;
-        }
-
-        var leftRight = ["L", "R"];
-        */
-
-        //
         if (n <= 0) throw new Error("Invalid value");
 
         let i = 0; // 0 -> [], 1 -> ["L", "R"], 2 -> ["LL", "LR"], 3 -> ["LLL", "LLR", "LRL", "LRR"]
@@ -60,29 +52,10 @@ function getNodeAt(rootNode, level, index) {
         }
 
         return result;
-
-
-
-        /*if(n === 1) {
-            return basic;
-        }
-
-        var result = [];
-        for(var i = 0; i < leftRight.length; i++) {
-            for(var j = 0; j < str.length; j++)  {
-                result.append(leftRight[i] + str[j]);
-            }
-        }
-
-        return result;*/
     }
 
     let comb = generateLeftRightCombinations(level);
     let steps = comb[index];
-    if(steps === undefined) {
-        // break here & investigate why
-        let a = 100;
-    }
     var currentNode = rootNode;
     for (let k = 0; k < steps.length; k++) {
         if (steps.charAt(k) === "L") {
